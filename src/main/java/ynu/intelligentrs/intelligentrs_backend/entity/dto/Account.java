@@ -1,6 +1,7 @@
 package ynu.intelligentrs.intelligentrs_backend.entity.dto;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import ynu.intelligentrs.intelligentrs_backend.entity.BaseData;
@@ -15,9 +16,14 @@ import java.util.Date;
 public class Account implements BaseData {
     @TableId(type = IdType.AUTO)
     Integer id;
+    @TableField("username")
     String username;
+    @TableField("password")
     String password;
+    @TableField("email")
     String email;
+    @TableField("role")
     String role;
+    @TableField("register_time")
     Date registerTime;
 }
